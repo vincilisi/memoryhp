@@ -1,0 +1,68 @@
+
+h1 {
+    font-weight: bold;
+    color: #fdb827;
+    margin-bottom: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #14141f;
+}
+
+#memoryGrid {
+    display: grid;
+    gap: 5px; /* Spaziatura tra le carte */
+    width: 100%; /* Adatta alla larghezza della finestra */
+    height: auto; /* Altezza dinamica basata sul contenuto */
+}
+
+.card {
+    width: 200px; /* Cambia larghezza */
+    height: 300px; /* Cambia altezza */
+    background-color: #fdb827; /* Colore di sfondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Modifica dimensione del testo */
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.3s, width 0.3s, height 0.3s; /* Aggiunge transizioni fluide */
+}
+
+.card.flipped {
+    background-color: #ffffff;
+    color: #14141f;
+    transform: scale(1.05); /* Aggiunge un leggero zoom quando è girata */
+}
+
+#timer {
+    color: #fdb827;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#moves {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fdb827;
+    text-align: center;
+}
+
+#endMessage {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Nascondi inizialmente */
+}
+
+#endMessage.failed {
+    color: red; /* Colore per il messaggio di fallimento */
+}
+
+#endMessage.success {
+    color: green; /* Colore per il messaggio di successo */
+}
